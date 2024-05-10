@@ -1,7 +1,7 @@
 package `fun`.notfound.sniffr
 
-import arrow.core.Eval
-import arrow.core.foldLeft
+import arrow.core.fold
+import arrow.eval.Eval
 import `fun`.notfound.sniffr.JsonLang.*
 import `fun`.notfound.sniffr.Path.Segment.Field
 import `fun`.notfound.sniffr.Path.Segment.Index
@@ -93,7 +93,7 @@ class Sniffr<E, L, O, A>(
     }
 
     private fun <R> Obj<L, O, A>.fold(zero: R, grow: (R, Field, E) -> R): R =
-        lang.childrenOf(v).foldLeft(zero) { children, (field, child) ->
+        lang.childrenOf(v).fold(zero) { children, (field, child) ->
             val key = Field(field)
             grow(children, key, child)
         }

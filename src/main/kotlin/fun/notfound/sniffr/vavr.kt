@@ -1,6 +1,6 @@
 package `fun`.notfound.sniffr
 
-import arrow.core.Eval
+import arrow.eval.Eval
 import io.vavr.Tuple2
 import io.vavr.collection.LinkedHashMap
 import io.vavr.collection.Map

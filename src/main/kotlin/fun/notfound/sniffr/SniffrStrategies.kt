@@ -1,6 +1,6 @@
 package `fun`.notfound.sniffr
 
-import arrow.core.Eval
+import arrow.eval.Eval
 import io.vavr.collection.List
 import io.vavr.collection.Map
 import io.vavr.collection.Traversable
