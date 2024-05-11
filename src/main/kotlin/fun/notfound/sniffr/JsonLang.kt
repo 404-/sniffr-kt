@@ -16,5 +16,6 @@ interface JsonLang<E, L, O, A> {
 
     fun elementsOf(el: A): List<E>
     fun get(el: A, index: Int): E?
-}
 
+    companion object
+}

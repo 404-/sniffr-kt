@@ -5,8 +5,10 @@ import io.vavr.collection.List
 
 @JvmInline value class Path(val segments: Seq<Segment>) {
     sealed interface Segment {
-        @JvmInline value class Field(val name: String) : Segment
-        @JvmInline value class Index(val value: Int) : Segment
+        @JvmInline value class Field(val name: String) : Segment { companion object }
+        @JvmInline value class Index(val value: Int) : Segment { companion object }
+
+        companion object
     }
 
     operator fun plus(field: String): Path =
