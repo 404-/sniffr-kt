@@ -5,9 +5,9 @@ plugins {
 version = "0.1.0"
 
 dependencies {
-    implementation("io.vavr:vavr:0.10.4")
-    implementation("io.arrow-kt:arrow-core:1.2.4")
+    implementation(libs.vavr)
+    implementation(libs.arrow.core)
 
     testImplementation(kotlin("test"))
-    testImplementation("io.kotest:kotest-runner-junit5:5.9.0")
+    testImplementation(libs.kotest.runner)
 }
